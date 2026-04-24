@@ -368,13 +368,14 @@ export default function WeatherTracker() {
                   <div className="hint">A quick glance at the forecast</div>
                 </div>
                 <div className="forecast">
-                  {(daily?.time || []).slice(0, 4).map((t, i) => {
-                    const [txt, ic] = iconFor(daily?.weather_code?.[i]);
+                  {(daily?.time || []).slice(0, 4).map((t) => {
+                    const index = (daily?.time || []).indexOf(t);
+                    const [txt, ic] = iconFor(daily?.weather_code?.[index]);
                     return (
                       <div className="day" key={t}>
                         <div className="dow">{dayName(t)}</div>
                         <div className="icon">{ic}</div>
-                        <div className="temps">{Math.round(daily?.temperature_2m_max?.[i] ?? 0)}° / {Math.round(daily?.temperature_2m_min?.[i] ?? 0)}°</div>
+                        <div className="temps">{Math.round(daily?.temperature_2m_max?.[index] ?? 0)}° / {Math.round(daily?.temperature_2m_min?.[index] ?? 0)}°</div>
                         <div className="range">{txt}</div>
                       </div>
                     );
