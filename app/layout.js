@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Brooklyn Weather — Feels Like",
-  description: "What it actually feels like in Brooklyn right now.",
+  title: "Weather 2026",
+  description: "A simple, aesthetic weather tracker for the rest of 2026.",
 };
 
 export default function RootLayout({ children }) {
@@ -8,15 +8,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body>{children}</body>
     </html>
